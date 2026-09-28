@@ -1,0 +1,678 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="ro" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>DeratPro - Bioprotecție &amp; Servicii DDD Profesionale</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Manrope & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed": "#d6e3fe",
+            "on-secondary-fixed": "#002114",
+            "tertiary": "#000000",
+            "surface-container-lowest": "#ffffff",
+            "on-primary": "#ffffff",
+            "tertiary-fixed-dim": "#93ccff",
+            "background": "#faf8ff",
+            "on-surface": "#131b2e",
+            "surface-tint": "#525f75",
+            "primary-container": "#0e1c2f",
+            "primary-fixed-dim": "#bac7e1",
+            "surface-container": "#eaedff",
+            "error-container": "#ffdad6",
+            "on-secondary-container": "#00714e",
+            "on-tertiary-fixed-variant": "#004b73",
+            "on-primary-fixed-variant": "#3a475c",
+            "inverse-on-surface": "#eef0ff",
+            "on-primary-fixed": "#0e1c2f",
+            "outline": "#75777d",
+            "tertiary-container": "#001d31",
+            "on-tertiary-fixed": "#001d31",
+            "on-secondary-fixed-variant": "#005137",
+            "inverse-surface": "#283044",
+            "error": "#ba1a1a",
+            "tertiary-fixed": "#cce5ff",
+            "inverse-primary": "#bac7e1",
+            "surface-container-low": "#f2f3ff",
+            "on-tertiary-container": "#188ace",
+            "primary": "#000000",
+            "secondary-container": "#82f5c1",
+            "outline-variant": "#c5c6cd",
+            "surface": "#faf8ff",
+            "on-primary-container": "#77849c",
+            "on-error": "#ffffff",
+            "secondary-fixed-dim": "#68dba9",
+            "on-background": "#131b2e",
+            "on-secondary": "#ffffff",
+            "secondary-fixed": "#85f8c4",
+            "surface-bright": "#faf8ff",
+            "surface-container-high": "#e2e7ff",
+            "surface-container-highest": "#dae2fd",
+            "surface-variant": "#dae2fd",
+            "on-error-container": "#93000a",
+            "secondary": "#006c4a",
+            "on-surface-variant": "#44474c",
+            "surface-dim": "#d2d9f4",
+            "on-tertiary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter-mobile": "1rem",
+            "margin": "2rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2.5rem",
+            "gutter": "1.5rem",
+            "margin-mobile": "1rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-2xl": "4rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "label-technical": ["Plus Jakarta Sans"],
+            "headline-sm": ["Manrope"],
+            "display-hero": ["Manrope"],
+            "display-hero-mobile": ["Manrope"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Manrope"],
+            "body-xl": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-xl": ["Manrope"],
+            "headline-lg": ["Manrope"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Manrope"]
+          },
+          "fontSize": {
+            "label-technical": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+            "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "800" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-xl": ["20px", { "lineHeight": "32px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    /* Subtle touch polish */
+    -webkit-tap-highlight-color: transparent;
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TOP NAVIGATION BAR (As per Shared Components JSON specification with mobile responsive enhancements) -->
+<header class="bg-surface-container-lowest/90 dark:bg-primary-container/90 backdrop-blur-md text-secondary dark:text-secondary-fixed docked full-width top-0 sticky z-50 shadow-sm border-b border-outline-variant/30 dark:border-outline/20">
+<div class="max-w-7xl mx-auto px-4 md:px-8 py-3 flex items-center justify-between w-full">
+<!-- Brand Logo Anchor -->
+<a class="text-headline-md font-headline-md font-bold text-on-surface dark:text-inverse-on-surface tracking-tight flex items-center gap-1.5" href="#">
+<span class="w-7 h-7 rounded-lg bg-secondary text-surface-container-lowest flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</span>
+<span class="">Derat<span class="text-secondary dark:text-secondary-fixed">Pro</span></span>
+</a>
+<!-- Desktop Nav Links (Hidden on mobile per responsive pivot) -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-secondary dark:text-secondary-fixed font-label-lg font-semibold border-b-2 border-secondary dark:border-secondary-fixed pb-1" href="#servicii">Servicii</a>
+<a class="text-on-surface-variant dark:text-primary-fixed-dim font-label-lg font-medium transition-colors hover:text-secondary" href="#de-ce-noi">De ce noi</a>
+<a class="text-on-surface-variant dark:text-primary-fixed-dim font-label-lg font-medium transition-colors hover:text-secondary" href="#cum-functioneaza">Cum funcționează</a>
+<a class="text-on-surface-variant dark:text-primary-fixed-dim font-label-lg font-medium transition-colors hover:text-secondary" href="#contact">Contact</a>
+</nav>
+<!-- Trailing Action: Quick Phone Tap Button on Mobile & Call on Desktop -->
+<div class="flex items-center gap-2">
+
+<!-- Mobile Drawer Toggle -->
+<button aria-label="Deschide meniu" class="md:hidden p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container active:scale-95 transition-transform" id="mobile-menu-btn">
+<span class="material-symbols-outlined text-[24px]" id="menu-icon">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Dropdown Accordion Menu -->
+<div class="hidden md:hidden px-4 pt-2 pb-4 bg-surface-container-lowest border-t border-outline-variant/20 shadow-md" id="mobile-menu">
+<div class="flex flex-col gap-2">
+<a class="px-3 py-2 rounded-lg text-secondary font-semibold font-label-lg bg-surface-container-low" href="#servicii">Servicii Specializate</a>
+<a class="px-3 py-2 rounded-lg text-on-surface font-medium font-label-lg hover:bg-surface-container-low" href="#de-ce-noi">De ce noi</a>
+<a class="px-3 py-2 rounded-lg text-on-surface font-medium font-label-lg hover:bg-surface-container-low" href="#cum-functioneaza">Cum funcționează</a>
+<a class="px-3 py-2 rounded-lg text-on-surface font-medium font-label-lg hover:bg-surface-container-low" href="#contact">Cere ofertă</a>
+</div>
+</div>
+</header>
+<main>
+<!-- HERO SECTION: Compact Dark Navy Gradient with Particle Glow Styling -->
+<section class="relative bg-gradient-to-b from-primary-container via-primary-container to-[#08121f] text-on-primary pt-7 pb-10 px-4 overflow-hidden border-b border-outline-variant/10">
+<!-- Glow ambient background blobs -->
+<div class="absolute -top-16 -right-16 w-56 h-56 bg-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 -left-12 w-48 h-48 bg-tertiary-fixed-dim/15 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Subtle precision grid background -->
+<div class="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+<div class="relative max-w-md mx-auto flex flex-col items-start gap-4">
+<!-- Emergency Dispatch Badge -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/15 border border-secondary-fixed/30 backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-ping"></span>
+<span class="w-1.5 h-1.5 -ml-2.5 rounded-full bg-secondary-fixed"></span>
+<span class="font-label-technical text-secondary-fixed uppercase tracking-wider">Disponibil 24/7</span>
+</div>
+<!-- Punchy Hero Title -->
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile font-bold tracking-tight text-surface-container-lowest leading-tight">
+          Bioprotecție Rapidă &amp; Sigură pentru Spațiul Tău
+        </h1>
+<!-- Subtitle / Clinical Statement -->
+<p class="font-body-md text-body-md text-primary-fixed-dim leading-relaxed">
+          Servicii profesionale complete de Deratizare, Dezinsecție și Dezinfecție certificate DSP &amp; DSVSA. Echipe mobile pregătite pentru intervenții de urgență în 4 ore.
+        </p>
+<!-- CTA Action Cluster -->
+<div id="threejs-container" class="relative w-full h-56 my-2 rounded-xl overflow-hidden flex flex-col items-center justify-center border border-outline-variant/20 bg-surface-container-lowest/5 backdrop-blur-sm shadow-inner group"><div class="absolute inset-0 bg-gradient-to-b from-secondary/10 to-transparent pointer-events-none"></div><div class="relative flex flex-col items-center gap-2 z-10 text-center px-4"><div class="w-16 h-16 rounded-full bg-secondary/20 border border-secondary-fixed/40 flex items-center justify-center text-secondary-fixed animate-pulse shadow-md"><span class="material-symbols-outlined text-[36px]">shield_with_heart</span></div><div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest/10 border border-outline-variant/20 backdrop-blur-md"><span class="w-2 h-2 rounded-full bg-secondary-fixed"></span><span class="font-label-technical text-secondary-fixed uppercase tracking-wider text-[11px]">Interactive 3D Bioprotection Shield</span></div></div><div class="absolute bottom-2 right-3 text-[11px] font-label-technical text-primary-fixed-dim/70">Three.js Canvas Container</div><a class="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-surface-container-lowest/10 border border-outline-variant/30 text-surface-container-lowest font-label-lg font-bold rounded-lg shadow-sm hover:bg-surface-container-lowest/20 hover:border-secondary transition-all active:scale-[0.98] text-center backdrop-blur-sm" href="tel:0722000000"><span class="material-symbols-outlined text-secondary-fixed text-[18px]" style="font-variation-settings: 'FILL' 1;">call</span><span class="">Sună acum</span></a></div><div class="w-full flex flex-col sm:flex-row gap-2.5 pt-2"><a class="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-secondary text-surface-container-lowest font-label-lg font-bold rounded-lg shadow-md hover:bg-on-secondary-container transition-all active:scale-[0.98] border border-secondary-fixed/20 text-center" href="#contact"><span class="">Cere ofertă</span><span class="material-symbols-outlined text-[18px]">arrow_downward</span></a><a class="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-surface-container-lowest/10 border border-outline-variant/30 text-surface-container-lowest font-label-lg font-bold rounded-lg shadow-sm hover:bg-surface-container-lowest/20 hover:border-secondary transition-all active:scale-[0.98] text-center backdrop-blur-sm" href="tel:0722000000"><span class="material-symbols-outlined text-secondary-fixed text-[18px]" style="font-variation-settings: 'FILL' 1;">call</span><span class="">Sună acum</span></a></div>
+<!-- Trust seals micro-badge bar -->
+
+</div>
+</section>
+<!-- TRUST METRICS CAROUSEL / STACK -->
+
+<!-- SERVICES SECTION: 3 Stacked Touch-Friendly Cards with Expandable Details -->
+<section class="max-w-md mx-auto px-4 py-8" id="servicii">
+<div class="mb-4">
+<div class="inline-flex items-center gap-1 text-secondary font-label-technical uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[14px]">medical_services</span>
+<span class="">Protocoale Tehnice DDD</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+          Servicii Specializate
+        </h2>
+<p class="font-body-md text-on-surface-variant text-body-md mt-1">
+          Tratamente avizate de Ministerul Sănătății, fără compromisuri pentru siguranța rezidenților și a animalelor.
+        </p>
+</div>
+<!-- Service Cards Vertical Stack -->
+<div class="flex flex-col gap-3.5">
+<!-- Card 1: Deratizare -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-4 shadow-sm transition-all hover:border-secondary">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center flex-shrink-0 border border-outline-variant/30">
+<span class="material-symbols-outlined text-[24px]">pest_control_rodent</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Deratizare</h3>
+
+</div>
+</div>
+<button aria-expanded="false" class="p-1 rounded-full text-on-surface-variant hover:bg-surface-container-low transition-colors" onclick="toggleService('detail-deratizare', this)">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200" style="transform: rotate(0deg);">expand_more</span>
+</button>
+</div>
+<p class="mt-2 text-on-surface-variant font-body-md text-body-md">
+            Combatere profesională a rozătoarelor cu raticide biodegradabile de generația a III-a și monitorizare perimetrală continuă.
+          </p>
+<!-- Expandable Detail -->
+<div class="mt-3 pt-3 border-t border-outline-variant/20 text-on-surface-variant text-body-md space-y-1.5 bg-surface-container-low/40 p-2.5 rounded-lg hidden" id="detail-deratizare">
+<div class="flex items-center gap-1.5 text-on-surface font-label-md">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="">Montare cutii intoxicare din PVC rezistent UV</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface font-label-md">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="">Substanțe atractive hidrofobe cu gust amar Bitrex</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface font-label-md">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="">Eliberare proces-verbal de execuție la finalizare</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Dezinsecție -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-4 shadow-sm transition-all hover:border-secondary">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center flex-shrink-0 border border-outline-variant/30">
+<span class="material-symbols-outlined text-[24px]">pest_control</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Dezinsecție</h3>
+
+</div>
+</div>
+<button aria-expanded="false" class="p-1 rounded-full text-on-surface-variant hover:bg-surface-container-low transition-colors" onclick="toggleService('detail-dezinsectie', this)">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200">expand_more</span>
+</button>
+</div>
+<p class="mt-2 text-on-surface-variant font-body-md text-body-md">
+            Eliminare sigură pentru gândaci de bucătărie, ploșnițe, căpușe, purici și furnici. Soluții inodore fără pătare pe mobilier.
+          </p>
+<!-- Expandable Detail -->
+<div class="hidden mt-3 pt-3 border-t border-outline-variant/20 text-on-surface-variant text-body-md space-y-1.5 bg-surface-container-low/40 p-2.5 rounded-lg" id="detail-dezinsectie">
+<div class="flex items-center gap-1.5 text-on-surface font-label-md">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="">Tehnologie ULV particule microfine (sub 20 microni)</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface font-label-md">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="">Efect remanent până la 90 de zile pe suprafețe</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface font-label-md">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="">Sigur pentru copii și animale de companie după aerisire</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Dezinfecție -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 p-4 shadow-sm transition-all hover:border-secondary">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center flex-shrink-0 border border-outline-variant/30">
+<span class="material-symbols-outlined text-[24px]">sanitizer</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Dezinfecție</h3>
+
+</div>
+</div>
+<button aria-expanded="false" class="p-1 rounded-full text-on-surface-variant hover:bg-surface-container-low transition-colors" onclick="toggleService('detail-dezinfectie', this)">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200" style="transform: rotate(0deg);">expand_more</span>
+</button>
+</div>
+<p class="mt-2 text-on-surface-variant font-body-md text-body-md">
+            Sterilizare microbiologică a aerului și suprafețelor împotriva bacteriilor, fungilor, virusurilor și a sporilor de mucegai.
+          </p>
+<!-- Expandable Detail -->
+<div class="mt-3 pt-3 border-t border-outline-variant/20 text-on-surface-variant text-body-md space-y-1.5 bg-surface-container-low/40 p-2.5 rounded-lg hidden" id="detail-dezinfectie">
+<div class="flex items-center gap-1.5 text-on-surface font-label-md">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="">Substanțe de nivel medical conform normelor EN 14476</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface font-label-md">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="">Generare aerosoli uscați fără umiditate persistentă</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface font-label-md">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="">Recomandat pentru cabinete, birouri, spații HoReCa</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- DE CE DERATPRO: Touch-Friendly Bento Grid -->
+<section class="max-w-md mx-auto px-4 py-6 bg-surface-container-low/60 border-y border-outline-variant/20" id="de-ce-noi">
+<div class="mb-4">
+<span class="font-label-technical text-secondary uppercase tracking-wider">Standarde de Excelență</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">De ce DeratPro</h2>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<!-- Feature 1 -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/30 flex items-start gap-3 shadow-xs">
+<div class="w-8 h-8 rounded-lg bg-secondary/15 text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[16px] font-bold text-on-surface">Avize DSP &amp; DSVSA Valabile</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Autorizație sanitar-veterinară completă și procese-verbale recunoscute legal la controalele oficiale.</p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/30 flex items-start gap-3 shadow-xs">
+<div class="w-8 h-8 rounded-lg bg-secondary/15 text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">eco</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[16px] font-bold text-on-surface">Soluții Ecologice &amp; Sigure</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Biocide din grupele principale de toxicitate redusă, hipoalergenice, sigure pentru copii și animale de casă.</p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/30 flex items-start gap-3 shadow-xs">
+<div class="w-8 h-8 rounded-lg bg-secondary/15 text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[16px] font-bold text-on-surface">Echipă de Urgență Mobilă</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Autospeciale dotate cu generatoare termice și ULV pentru intervenții rapide în regim de 24/7.</p>
+</div>
+</div>
+<!-- Feature 4 -->
+<div class="bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/30 flex items-start gap-3 shadow-xs">
+<div class="w-8 h-8 rounded-lg bg-secondary/15 text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">handshake</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[16px] font-bold text-on-surface">Garanție Scrisă Re-Intervenție</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Dacă problema persistă în termenul contractual, efectuăm rapelul absolut gratuit în baza garanției.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CUM FUNCȚIONEAZĂ: 3 Vertical Numbered Steps with Connective Line -->
+<section class="max-w-md mx-auto px-4 py-8" id="cum-functioneaza">
+<div class="mb-6">
+<span class="font-label-technical text-secondary uppercase tracking-wider">Protocol Operațional</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">Cum funcționează</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Trei pași simpli și riguroși către un spațiu 100% decontaminat.</p>
+</div>
+<div class="relative pl-6 space-y-6 before:content-[''] before:absolute before:left-3 before:top-3 before:bottom-3 before:w-0.5 before:bg-outline-variant/30">
+<!-- Step 1 -->
+<div class="relative flex items-start gap-3">
+<div class="absolute -left-6 w-6 h-6 rounded-full bg-primary-container text-surface-container-lowest font-headline-sm text-xs flex items-center justify-center font-bold ring-4 ring-background">
+            1
+          </div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/30 shadow-xs w-full">
+<div class="flex items-center justify-between mb-1">
+<h4 class="font-headline-sm text-[16px] font-bold text-on-surface">Contact &amp; Pre-Diagnostic</h4>
+<span class="material-symbols-outlined text-secondary text-[18px]">call</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Ne apelezi sau transmiți formularul. Tehnicianul DDD evaluează gradul de infestare și specificul spațiului tău.
+            </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex items-start gap-3">
+<div class="absolute -left-6 w-6 h-6 rounded-full bg-primary-container text-surface-container-lowest font-headline-sm text-xs flex items-center justify-center font-bold ring-4 ring-background">
+            2
+          </div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant/30 shadow-xs w-full">
+<div class="flex items-center justify-between mb-1">
+<h4 class="font-headline-sm text-[16px] font-bold text-on-surface">Evaluare &amp; Plan Personalizat</h4>
+<span class="material-symbols-outlined text-secondary text-[18px]">assignment</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Stabilim substanțele potrivite (gel, pulbere, ceață ULV), dozajul optim și măsurile de izolare biologică.
+            </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex items-start gap-3">
+<div class="absolute -left-6 w-6 h-6 rounded-full bg-secondary text-surface-container-lowest font-headline-sm text-xs flex items-center justify-center font-bold ring-4 ring-background">
+            3
+          </div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl border border-secondary/40 shadow-xs w-full bg-gradient-to-br from-surface-container-lowest to-surface-container-low">
+<div class="flex items-center justify-between mb-1">
+<h4 class="font-headline-sm text-[16px] font-bold text-on-surface">Intervenție &amp; Certificare DDD</h4>
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Aplicăm tratamentul în siguranță, eliberăm Procesul Verbal legal DSP și oferim garanție scrisă pentru spațiu.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- FORMULAR DE CONTACT & OFERTĂ CU STATE TOGGLES PENTRU PREVIEW -->
+<section class="max-w-md mx-auto px-4 py-8" id="contact">
+<div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/40 shadow-md p-5 relative overflow-hidden">
+<!-- Header Card -->
+<div class="mb-4">
+<span class="font-label-technical text-secondary uppercase tracking-wider">Fără Obligații Contractuale</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">Cere o Ofertă Rapidă</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Răspundem în maximum 15 minute cu o cotație exactă.</p>
+</div>
+<!-- CARD STATE TOGGLES (Requirement: Preview Normal, Eroare, Succes) -->
+<div class="bg-surface-container-low p-1.5 rounded-lg mb-5 flex items-center justify-between gap-1 border border-outline-variant/20">
+<button class="flex-1 py-1 px-2 rounded-md font-label-technical text-center transition-all bg-surface-container-lowest text-on-surface shadow-xs font-bold" id="state-btn-normal" onclick="setFormState('normal')" type="button">
+            Normal
+          </button>
+<button class="flex-1 py-1 px-2 rounded-md font-label-technical text-center transition-all text-on-surface-variant hover:text-on-surface" id="state-btn-error" onclick="setFormState('error')" type="button">
+            Eroare
+          </button>
+<button class="flex-1 py-1 px-2 rounded-md font-label-technical text-center transition-all text-on-surface-variant hover:text-on-surface" id="state-btn-success" onclick="setFormState('success')" type="button">
+            Succes
+          </button>
+</div>
+<!-- FORM CONTAINER -->
+<div id="form-interactive-wrapper">
+<!-- STATE 1: Normal Form -->
+<form class="flex-col gap-3.5 flex" id="state-view-normal" onsubmit="event.preventDefault(); setFormState('success');">
+<!-- Nume -->
+<div>
+<label class="block font-label-md text-on-surface mb-1" for="name-input">Numele dvs. sau Companie *</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg border border-outline-variant/60 focus:border-secondary focus:ring-2 focus:ring-secondary/20 text-on-surface text-body-md bg-surface-container-lowest transition-all" id="name-input" placeholder="ex: Popescu Andrei / Restaurant SRL" required="" type="text">
+</div>
+<!-- Telefon -->
+<div>
+<label class="block font-label-md text-on-surface mb-1" for="phone-input">Număr de Telefon *</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg border border-outline-variant/60 focus:border-secondary focus:ring-2 focus:ring-secondary/20 text-on-surface text-body-md bg-surface-container-lowest transition-all" id="phone-input" placeholder="07xxxxxxxx" required="" type="tel">
+</div>
+<!-- Tip Serviciu -->
+<div>
+<label class="block font-label-md text-on-surface mb-1" for="service-select">Serviciu solicitat</label>
+<select class="w-full px-3.5 py-2.5 rounded-lg border border-outline-variant/60 focus:border-secondary focus:ring-2 focus:ring-secondary/20 text-on-surface text-body-md bg-surface-container-lowest transition-all" id="service-select">
+<option value="pachet">Pachet Complet DDD (Recomandat)</option>
+<option value="deratizare">Deratizare (Șoareci, Șobolani)</option>
+<option value="dezinsectie">Dezinsecție (Gândaci, Ploșnițe, Căpușe)</option>
+<option value="dezinfectie">Dezinfecție Nebulizare Virucidă</option>
+</select>
+</div>
+<!-- Suprafață estimată -->
+<div>
+<label class="block font-label-md text-on-surface mb-1" for="size-select">Suprafață aproximativă</label>
+<select class="w-full px-3.5 py-2.5 rounded-lg border border-outline-variant/60 focus:border-secondary focus:ring-2 focus:ring-secondary/20 text-on-surface text-body-md bg-surface-container-lowest transition-all" id="surface-select"><option value="sub-60">Sub 60 m² (Apartament / Spațiu mic)</option><option value="60-200">60 - 200 m² (Casă / Sediu firmă)</option><option value="200-500">200 - 500 m² (Depozit / Restaurant)</option><option value="peste-500">Peste 500 m² (Spațiu industrial)</option></select>
+</div>
+<!-- Urgent Intervention Check -->
+<div class="flex items-start gap-2.5 pt-1"><input class="rounded border-outline-variant/60 text-secondary focus:ring-secondary mt-1" id="gdpr-consent" required="" type="checkbox"><label class="text-xs text-on-surface-variant font-medium select-none cursor-pointer leading-normal" for="gdpr-consent">Sunt de acord cu prelucrarea datelor cu caracter personal conform politicii GDPR.</label></div>
+<button class="w-full mt-2 py-3.5 px-4 bg-secondary text-surface-container-lowest rounded-lg font-label-lg font-bold shadow-md hover:bg-on-secondary-container transition-all active:scale-[0.98] flex items-center justify-center gap-2" type="submit">
+<span class="">Trimite solicitarea</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<p class="text-center font-label-technical text-on-surface-variant">Datele tale sunt 100% confidențiale conform GDPR.</p>
+</form>
+<!-- STATE 2: Error Form (Preview with clear red validation messages) -->
+<div class="flex-col gap-3.5 hidden" id="state-view-error">
+<!-- Global error banner -->
+<div class="p-3 rounded-lg bg-error-container/60 border border-error/40 flex items-start gap-2.5 text-on-error-container">
+<span class="material-symbols-outlined text-error text-[20px] flex-shrink-0">error</span>
+<div class="text-xs">
+<span class="font-bold block">Nu am putut transmite formularul.</span>
+<span class="">Vă rugăm să corectați câmpurile marcate mai jos cu roșu.</span>
+</div>
+</div>
+<!-- Nume with Error -->
+<div>
+<label class="block font-label-md text-error mb-1">Numele dvs. sau Companie *</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg border-2 border-error focus:ring-2 focus:ring-error/20 text-on-surface text-body-md bg-error-container/10" type="text" value="">
+<p class="mt-1 text-xs font-semibold text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">close</span>
+<span class="">Câmpul 'Nume' este obligatoriu pentru emiterea ofertei.</span>
+</p>
+</div>
+<!-- Telefon with Error -->
+<div>
+<label class="block font-label-md text-error mb-1">Număr de Telefon *</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg border-2 border-error focus:ring-2 focus:ring-error/20 text-on-surface text-body-md bg-error-container/10" type="tel" value="0722abc">
+<p class="mt-1 text-xs font-semibold text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">close</span>
+<span class="">Introduceți un număr valid format din 10 cifre (ex: 0722000000).</span>
+</p>
+</div>
+<button class="w-full mt-2 py-3 px-4 bg-outline text-surface-container-lowest rounded-lg font-label-lg font-bold hover:bg-on-surface transition-all flex items-center justify-center gap-2" onclick="setFormState('normal')" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span class="">Reîncearcă validarea</span>
+</button>
+</div>
+<!-- STATE 3: Success Screen (Mulțumire și confirmare apel) -->
+<div class="text-center py-6 px-2 flex-col items-center gap-3 hidden" id="state-view-success">
+<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Cerere Înregistrată!</h3>
+<div class="bg-surface-container-low p-3 rounded-xl border border-secondary/30 text-left w-full my-2">
+<div class="flex items-center justify-between text-xs font-semibold text-secondary mb-1">
+<span class="">Cod Solicitare: #DP-8921</span>
+<span class="">Prioritate: Ridicată</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Un dispecer tehnic DeratPro va apela numărul transmis în cel mult <strong>15 minute</strong> pentru confirmarea adresei și a intervalului orar de intervenție.
+              </p>
+</div>
+<a class="w-full py-3.5 px-4 bg-secondary text-surface-container-lowest rounded-lg font-label-lg font-bold shadow-md hover:bg-on-secondary-container transition-all flex items-center justify-center gap-2" href="tel:0722000000">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span class="">Sună direct la dispecerat</span>
+</a>
+<button class="text-xs font-label-technical text-on-surface-variant hover:text-on-surface underline pt-2" onclick="setFormState('normal')" type="button">
+              Trimite o altă solicitare
+            </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- QUICK-DIAL STICKY BOTTOM FLOATING ACTION BAR (Requirement #9) -->
+
+<!-- MOBILE FOOTER (As per Shared Components JSON specification) -->
+<footer class="bg-primary-container dark:bg-surface-container-lowest text-secondary dark:text-secondary-container docked full-width bottom border-t border-outline/20 dark:border-outline-variant/30 mt-8 mb-16">
+<div class="max-w-7xl mx-auto px-4 py-8 flex flex-col gap-6 w-full text-left">
+<!-- Brand & Info -->
+<div>
+<div class="text-headline-md font-headline-md font-bold text-on-primary-container dark:text-on-surface tracking-tight mb-2">
+          Derat<span class="text-secondary-container dark:text-secondary">Pro</span>
+</div>
+<p class="text-primary-fixed-dim dark:text-on-surface-variant text-body-md leading-relaxed">
+          Companie autorizată specializată în biosecuritate, dezinsecție ecologică, deratizare industrială și decontaminare spitalicească.
+        </p>
+</div>
+<!-- Legal Links as defined in Shared JSON -->
+<div class="flex flex-col gap-2 pt-2 border-t border-outline-variant/15 font-label-technical">
+<a class="text-primary-fixed-dim dark:text-on-surface-variant hover:text-secondary-container transition-colors py-1 flex items-center justify-between" href="#">
+<span class="">Termeni și Condiții</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+<a class="text-primary-fixed-dim dark:text-on-surface-variant hover:text-secondary-container transition-colors py-1 flex items-center justify-between" href="#">
+<span class="">Politică Confidențialitate</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+<a class="text-primary-fixed-dim dark:text-on-surface-variant hover:text-secondary-container transition-colors py-1 flex items-center justify-between" href="#">
+<span class="">Certificări DSP &amp; DSV</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+<a class="text-primary-fixed-dim dark:text-on-surface-variant hover:text-secondary-container transition-colors py-1 flex items-center justify-between" href="#">
+<span class="">Hartă Acoperire Națională</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+<a class="text-primary-fixed-dim dark:text-on-surface-variant hover:text-secondary-container transition-colors py-1 flex items-center justify-between" href="#">
+<span class="">ANPC</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Emergency dispatch contact summary -->
+<div class="bg-surface-container-lowest/5 p-3 rounded-lg border border-outline-variant/15 text-xs text-primary-fixed-dim">
+<span class="font-bold text-surface-container-lowest block mb-0.5">Dispecerat Național DDD:</span>
+<span class="">București &amp; Ilfov • Timișoara • Cluj-Napoca • Iași • Constanța</span>
+</div>
+<!-- Copyright Text from JSON -->
+<div class="text-primary-fixed-dim/70 dark:text-on-surface-variant text-[11px] font-label-technical leading-normal pt-2 border-t border-outline-variant/10">
+        © 2025 DeratPro DDD Services S.R.L. Toate drepturile rezervate. Autorizat DSP, DSVSA &amp; Ministerul Sănătății.
+      </div>
+</div>
+</footer>
+<!-- Micro-Interactions Script for Mobile Drawer, Expandable Details, and Form Preview States -->
+<script>
+    // Mobile Drawer Toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+          menuIcon.textContent = 'close';
+        } else {
+          mobileMenu.classList.add('hidden');
+          menuIcon.textContent = 'menu';
+        }
+      });
+
+      // Auto close menu when clicking link
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIcon.textContent = 'menu';
+        });
+      });
+    }
+
+    // Expandable Service Details Accordion
+    function toggleService(detailId, buttonEl) {
+      const detail = document.getElementById(detailId);
+      if (!detail) return;
+      const isCurrentlyHidden = detail.classList.contains('hidden');
+      const icon = buttonEl.querySelector('.material-symbols-outlined');
+
+      if (isCurrentlyHidden) {
+        detail.classList.remove('hidden');
+        buttonEl.setAttribute('aria-expanded', 'true');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      } else {
+        detail.classList.add('hidden');
+        buttonEl.setAttribute('aria-expanded', 'false');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    // Form State Preview Logic (Requirement #8: Normal, Error, Success preview states)
+    function setFormState(state) {
+      const viewNormal = document.getElementById('state-view-normal');
+      const viewError = document.getElementById('state-view-error');
+      const viewSuccess = document.getElementById('state-view-success');
+
+      const btnNormal = document.getElementById('state-btn-normal');
+      const btnError = document.getElementById('state-btn-error');
+      const btnSuccess = document.getElementById('state-btn-success');
+
+      // Hide all states
+      viewNormal.classList.add('hidden');
+      viewNormal.classList.remove('flex');
+      viewError.classList.add('hidden');
+      viewError.classList.remove('flex');
+      viewSuccess.classList.add('hidden');
+      viewSuccess.classList.remove('flex');
+
+      // Reset button styles
+      [btnNormal, btnError, btnSuccess].forEach(btn => {
+        btn.className = "flex-1 py-1 px-2 rounded-md font-label-technical text-center transition-all text-on-surface-variant hover:text-on-surface";
+      });
+
+      if (state === 'normal') {
+        viewNormal.classList.remove('hidden');
+        viewNormal.classList.add('flex');
+        btnNormal.className = "flex-1 py-1 px-2 rounded-md font-label-technical text-center transition-all bg-surface-container-lowest text-on-surface shadow-xs font-bold";
+      } else if (state === 'error') {
+        viewError.classList.remove('hidden');
+        viewError.classList.add('flex');
+        btnError.className = "flex-1 py-1 px-2 rounded-md font-label-technical text-center transition-all bg-error-container text-error font-bold shadow-xs";
+      } else if (state === 'success') {
+        viewSuccess.classList.remove('hidden');
+        viewSuccess.classList.add('flex');
+        btnSuccess.className = "flex-1 py-1 px-2 rounded-md font-label-technical text-center transition-all bg-secondary-container text-on-secondary-container font-bold shadow-xs";
+      }
+    }
+  </script>
+
+
+</body></html>
