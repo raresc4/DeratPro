@@ -18,7 +18,7 @@ export interface HeroContent {
 
 export const heroContent: HeroContent = {
   badge: "Disponibili 24/7 • Autorizat DSP & Ministerul Sănătății",
-  headlineLead: "Soluții Profesionale și Sigure de Bioprotecție:",
+  headlineLead: "Soluții Profesionale și Sigure de Bioprotecție",
   headlineAccent: "Deratizare, Dezinsecție & Dezinfecție",
   subtitle:
     "Intervenții rapide, substanțe certificate non-toxice pentru oameni și animale de companie, garantate 100% conform normelor europene.",

@@ -39,10 +39,11 @@ export function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.06)_1px,transparent_0)] [background-size:32px_32px]" />
       </div>
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 pb-16 pt-14 md:grid-cols-2 md:grid-rows-[1fr_auto] md:items-center md:gap-x-12 md:gap-y-8 md:px-8 md:pb-28 md:pt-24">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-5 px-4 pb-10 pt-8 sm:gap-6 sm:pb-14 sm:pt-12 lg:grid-cols-2 lg:grid-rows-[1fr_auto] lg:items-center lg:gap-x-12 lg:gap-y-8 lg:px-8 lg:pb-28 lg:pt-24">
         {/* Text block: badge, headline and desktop subtitle.
-            Mobile order 1; desktop it sits at the top of the left column. */}
-        <div className="order-1 flex flex-col items-start gap-6 md:col-start-1 md:row-start-1">
+            Stacked layouts show it first; on desktop it sits at the top of the
+            left column. */}
+        <div className="order-1 flex flex-col items-start gap-4 sm:gap-6 lg:col-start-1 lg:row-start-1">
           {/* Live-status trust badge */}
           <div className="inline-flex items-center gap-2.5 rounded-full border border-inverse-on-surface/20 bg-inverse-on-surface/10 px-3.5 py-1.5 backdrop-blur-md">
             <span className="relative inline-flex h-2.5 w-2.5">
@@ -57,16 +58,19 @@ export function Hero() {
           {/* Headline */}
           <h1
             id={HERO_HEADING_ID}
-            className="font-manrope text-display-hero-mobile font-extrabold tracking-tight text-inverse-on-surface md:text-display-hero"
+            className="font-manrope text-headline-xl-mobile font-extrabold tracking-tight text-inverse-on-surface sm:text-display-hero-mobile lg:text-display-hero"
           >
-            {heroContent.headlineLead}{" "}
-            <span className="text-secondary-fixed">
+            {heroContent.headlineLead}
+            {/* Accent joins only on the desktop two-column layout, where there
+                is room; on smaller stacked screens the lead alone is enough. */}
+            <span className="hidden text-secondary-fixed lg:inline">
+              {" "}
               {heroContent.headlineAccent}
             </span>
           </h1>
 
-          {/* Subtitle — desktop only */}
-          <p className="hidden max-w-xl font-jakarta text-body-lg leading-relaxed text-primary-fixed-dim md:block md:text-body-xl">
+          {/* Subtitle — shown from the desktop layout up. */}
+          <p className="hidden max-w-xl font-jakarta text-body-lg leading-relaxed text-primary-fixed-dim lg:block lg:text-body-xl">
             {heroContent.subtitle}
           </p>
         </div>
@@ -78,7 +82,7 @@ export function Hero() {
         <div
           id="hero-animation-slot"
           aria-hidden="true"
-          className="relative order-2 flex h-64 w-full items-center justify-center overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-lowest/5 shadow-inner backdrop-blur-sm md:order-none md:col-start-2 md:row-span-2 md:row-start-1 md:h-full md:min-h-[420px]"
+          className="relative order-2 flex h-[26vh] max-h-72 min-h-36 w-full items-center justify-center overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-lowest/5 shadow-inner backdrop-blur-sm sm:h-[30vh] lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:h-full lg:max-h-none lg:min-h-[420px]"
         >
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-secondary/10 to-transparent" />
           <span className="relative font-jakarta text-label-technical uppercase tracking-wider text-primary-fixed-dim/70">
@@ -88,7 +92,7 @@ export function Hero() {
 
         {/* CTA cluster. Mobile: order 3, below the animation slot. Desktop:
             bottom of the left column, under the text block. */}
-        <div className="order-3 flex w-full flex-col items-stretch gap-4 sm:w-auto sm:flex-row sm:items-center md:col-start-1 md:row-start-2">
+        <div className="order-3 flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4 lg:col-start-1 lg:row-start-2 lg:w-auto">
           <a href={ctaLink.href} className={primaryCtaClass}>
             <span>{heroPrimaryCtaLabel}</span>
             <ArrowRightIcon className="h-[18px] w-[18px]" />
