@@ -67,6 +67,15 @@ body {
  * and body typography scales used by the headline and subtitle.
  * Source of truth: docs/design/web/code.html tailwind.config + docs/design/DESIGN.md.
  */
+/*
+ * Sticky header height, shared between the Header (which sets its own height)
+ * and the Hero (which subtracts it so the first view fills the screen exactly).
+ * Header layout: Logo h-10 (2.5rem) + py-3.5 (2 × 0.875rem) + 1px border.
+ */
+:root {
+  --header-h: 4.375rem; /* ≈ 70px, matches the sticky header */
+}
+
 @theme {
   /* Colors */
   --color-tertiary-fixed-dim: #93ccff;

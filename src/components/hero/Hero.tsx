@@ -30,7 +30,7 @@ export function Hero() {
   return (
     <section
       aria-labelledby={HERO_HEADING_ID}
-      className="relative overflow-hidden bg-primary-container text-inverse-on-surface"
+      className="relative flex min-h-[calc(100svh-var(--header-h))] items-center overflow-hidden bg-primary-container text-inverse-on-surface"
     >
       {/* Decorative ambient background: two blurred glows + a faint dot grid. */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
@@ -39,7 +39,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.06)_1px,transparent_0)] [background-size:32px_32px]" />
       </div>
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-5 px-4 pb-10 pt-8 sm:gap-6 sm:pb-14 sm:pt-12 lg:grid-cols-2 lg:grid-rows-[1fr_auto] lg:items-center lg:gap-x-12 lg:gap-y-8 lg:px-8 lg:pb-28 lg:pt-24">
+      <div className="relative mx-auto grid min-h-[inherit] w-full max-w-7xl grid-cols-1 grid-rows-[auto_1fr_auto] gap-5 px-4 py-10 sm:gap-6 sm:py-14 lg:grid-cols-2 lg:grid-rows-[1fr_auto] lg:items-center lg:gap-x-12 lg:gap-y-8 lg:px-8 lg:py-24">
         {/* Text block: badge, headline and desktop subtitle.
             Stacked layouts show it first; on desktop it sits at the top of the
             left column. */}
@@ -82,7 +82,7 @@ export function Hero() {
         <div
           id="hero-animation-slot"
           aria-hidden="true"
-          className="relative order-2 flex h-[26vh] max-h-72 min-h-36 w-full items-center justify-center overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-lowest/5 shadow-inner backdrop-blur-sm sm:h-[30vh] lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:h-full lg:max-h-none lg:min-h-[420px]"
+          className="relative order-2 flex min-h-36 w-full flex-1 items-center justify-center overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-lowest/5 shadow-inner backdrop-blur-sm lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:h-full lg:min-h-[420px] lg:flex-none"
         >
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-secondary/10 to-transparent" />
           <span className="relative font-jakarta text-label-technical uppercase tracking-wider text-primary-fixed-dim/70">
