@@ -1,5 +1,6 @@
 import { Header } from "./components/header/Header";
 import { Hero } from "./components/hero/Hero";
+import { Services } from "./components/services/Services";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <Services />
       </main>
     </div>
   );

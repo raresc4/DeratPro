@@ -106,3 +106,32 @@ body {
   --text-body-xl--font-weight: 400;
   --text-body-xl--letter-spacing: -0.005em;
 }
+
+/*
+ * Services section tokens.
+ * Appended for the landing-page services section: the clean section
+ * background, the third card's accent color, and the heading/body typography
+ * scales used by the section header and card checklists.
+ * Source of truth: docs/design/web/code.html tailwind.config + docs/design/DESIGN.md.
+ */
+@theme {
+  /* Colors */
+  --color-surface-bright: #faf8ff;
+  --color-secondary-fixed-dim: #68dba9;
+
+  /* Typography scale (size / line-height / weight / tracking) */
+  --text-headline-xl: 40px;
+  --text-headline-xl--line-height: 48px;
+  --text-headline-xl--font-weight: 700;
+  --text-headline-xl--letter-spacing: -0.02em;
+
+  --text-headline-lg: 28px;
+  --text-headline-lg--line-height: 36px;
+  --text-headline-lg--font-weight: 700;
+  --text-headline-lg--letter-spacing: -0.015em;
+
+  --text-body-md: 14px;
+  --text-body-md--line-height: 22px;
+  --text-body-md--font-weight: 400;
+  --text-body-md--letter-spacing: 0em;
+}
