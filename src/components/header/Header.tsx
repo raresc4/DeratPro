@@ -116,14 +116,6 @@ export function Header() {
 
           <div className="mt-3 flex flex-col gap-2 border-t border-outline-variant/30 pt-3">
             <a
-              href={phone.href}
-              onClick={close}
-              className="inline-flex items-center gap-2 rounded-lg px-3 py-2.5 font-jakarta text-label-lg font-semibold text-on-surface transition-colors hover:bg-surface-container-low focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-inset"
-            >
-              <PhoneIcon className="h-5 w-5 text-secondary" />
-              <span>{phone.display}</span>
-            </a>
-            <a
               href={ctaLink.href}
               onClick={close}
               className={ctaClass}

@@ -60,3 +60,40 @@ body {
   background-color: var(--color-surface);
   color: var(--color-on-surface);
 }
+
+/*
+ * Hero section tokens.
+ * Appended for the landing-page hero: an ambient glow color plus the display
+ * and body typography scales used by the headline and subtitle.
+ * Source of truth: docs/design/web/code.html tailwind.config + docs/design/DESIGN.md.
+ */
+@theme {
+  /* Colors */
+  --color-tertiary-fixed-dim: #93ccff;
+
+  /* Typography scale (size / line-height / weight / tracking) */
+  --text-display-hero: 56px;
+  --text-display-hero--line-height: 64px;
+  --text-display-hero--font-weight: 800;
+  --text-display-hero--letter-spacing: -0.03em;
+
+  --text-display-hero-mobile: 36px;
+  --text-display-hero-mobile--line-height: 44px;
+  --text-display-hero-mobile--font-weight: 800;
+  --text-display-hero-mobile--letter-spacing: -0.025em;
+
+  --text-headline-xl-mobile: 28px;
+  --text-headline-xl-mobile--line-height: 36px;
+  --text-headline-xl-mobile--font-weight: 700;
+  --text-headline-xl-mobile--letter-spacing: -0.015em;
+
+  --text-body-lg: 16px;
+  --text-body-lg--line-height: 26px;
+  --text-body-lg--font-weight: 400;
+  --text-body-lg--letter-spacing: 0em;
+
+  --text-body-xl: 20px;
+  --text-body-xl--line-height: 32px;
+  --text-body-xl--font-weight: 400;
+  --text-body-xl--letter-spacing: -0.005em;
+}
