@@ -1,4 +1,5 @@
 import { ContactForm } from "./components/contact/ContactForm";
+import { Footer } from "./components/footer/Footer";
 import { Header } from "./components/header/Header";
 import { Hero } from "./components/hero/Hero";
 import { HowItWorks } from "./components/howItWorks/HowItWorks";
@@ -16,6 +17,7 @@ function App() {
         <HowItWorks />
         <ContactForm />
       </main>
+      <Footer />
     </div>
   );
 }
