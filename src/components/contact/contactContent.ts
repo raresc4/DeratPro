@@ -38,7 +38,7 @@ export const contactFields = {
   message: {
     label: "Detalii despre locație și problemă",
     placeholder:
-      "Menționează suprafața aproximativă (mp), tipul de spațiu și dacă s-a mai intervenit anterior...",
+      "Menționează tipul de spațiu, dacă s-a mai intervenit anterior și altceva ce vrei să ne transmiți...",
   },
 } as const;
 

@@ -1,4 +1,4 @@
-import { useId, useRef, useState, type ChangeEvent, type FormEvent } from "react";
+import { useId, useRef, useState, type ChangeEvent, type SubmitEvent } from "react";
 import type {
   ContactFormErrors,
   ContactFormStatus,
@@ -89,7 +89,7 @@ export function ContactForm() {
     return (event) => updateField(field, event.target.value);
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>): void {
+  function handleSubmit(event: SubmitEvent<HTMLFormElement>): void {
     event.preventDefault();
     const nextErrors = validateContactForm(values);
 
