@@ -135,3 +135,15 @@ body {
   --text-body-md--font-weight: 400;
   --text-body-md--letter-spacing: 0em;
 }
+
+/*
+ * "De ce noi" (Why Us) section tokens.
+ * Appended for the advantages grid: the per-card icon accent colors used on
+ * the neutral icon tiles. `secondary` already exists above; these two add the
+ * emerald/cyan container-text accents from the reference cards.
+ * Source of truth: docs/design/DESIGN.md (on-secondary-container / on-tertiary-container).
+ */
+@theme {
+  --color-on-secondary-container: #00714e;
+  --color-on-tertiary-container: #188ace;
+}

@@ -1,6 +1,8 @@
 import { Header } from "./components/header/Header";
 import { Hero } from "./components/hero/Hero";
+import { HowItWorks } from "./components/howItWorks/HowItWorks";
 import { Services } from "./components/services/Services";
+import { WhyUs } from "./components/whyUs/WhyUs";
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
       <main>
         <Hero />
         <Services />
+        <WhyUs />
+        <HowItWorks />
       </main>
     </div>
   );
