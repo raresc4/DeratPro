@@ -25,7 +25,7 @@ const HOLE_SCALE = 2.5; // hole size relative to its native scale
 const CAM_TARGET: [number, number, number] = [0, 0.5, 0];
 const DESKTOP_CAM_POS: [number, number, number] = [0, 0.5, 16];
 const DESKTOP_FOV = 45;
-const MOBILE_CAM_POS: [number, number, number] = [0, 0.5, 18];
+const MOBILE_CAM_POS: [number, number, number] = [0, 0.5, 11];
 const MOBILE_FOV = 50;
 
 function MouseHole() {

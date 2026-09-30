@@ -83,7 +83,7 @@ export function Hero() {
         <div
           id="hero-animation-slot"
           aria-hidden="true"
-          className="relative order-2 flex h-56 w-full items-center justify-center overflow-hidden shadow-inner backdrop-blur-sm sm:h-64 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:h-full lg:min-h-[420px]"
+          className="relative order-2 flex h-72 w-full items-center justify-center overflow-hidden shadow-inner backdrop-blur-sm sm:h-80 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:h-full lg:min-h-[420px]"
         >
           {/* <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-secondary/10 to-transparent" />
           <span className="relative font-jakarta text-label-technical uppercase tracking-wider text-primary-fixed-dim/70">
