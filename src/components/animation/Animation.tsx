@@ -14,10 +14,11 @@ import mouseHoleUrl from "../../assets/mouse_hole/mouse_hole.glb?url";
 // only zooms the camera out, it never restructures the scene.
 const START_X = -6;
 const HOLE_X = 3;
-const RUN_SPEED = 2; // units per second
-const ENTER_DISTANCE = 0.4; // how close to the hole before it "disappears"
-const SHRINK_SPEED = 6; // scale units per second while entering the hole
+const RUN_SPEED = 2.5; // units per second
+const ENTER_DISTANCE = 0.3; // how close to the hole before it "disappears"
+const SHRINK_SPEED = 4; // scale units per second while entering the hole
 const HOLE_SCALE = 2.5; // hole size relative to its native scale
+const HOLE_Y_ROTATION = -4.2;
 
 // Camera framing. Desktop is the reference; mobile pulls the camera back and
 // widens the FOV so the identical scene simply reads smaller. The camera looks
@@ -31,7 +32,7 @@ const MOBILE_FOV = 50;
 function MouseHole() {
   const { scene } = useGLTF(mouseHoleUrl);
   // Sit the hole at HOLE_X, facing the incoming mouse.
-  return <primitive object={scene} position={[HOLE_X, 0, 0]} scale={HOLE_SCALE} />;
+  return <primitive object={scene} position={[HOLE_X, 0, 0]} scale={HOLE_SCALE} rotation={[0, HOLE_Y_ROTATION, 0]}/>;
 }
 
 function RunningMouse({ modelUrl }: { modelUrl: string }) {
