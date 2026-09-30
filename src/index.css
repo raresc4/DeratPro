@@ -147,3 +147,19 @@ body {
   --color-on-secondary-container: #00714e;
   --color-on-tertiary-container: #188ace;
 }
+
+/*
+ * Contact form section tokens.
+ * Appended for the "Cere o ofertă personalizată" quote form: the error state
+ * palette (banner, invalid inputs, messages), the success confirmation icon
+ * tile, and the neutral outline used by input borders.
+ * Source of truth: docs/design/DESIGN.md + docs/design/web/code.html config.
+ * Note: --color-on-secondary-container is already declared above.
+ */
+@theme {
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-secondary-container: #82f5c1;
+  --color-outline: #75777d;
+}
