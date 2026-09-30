@@ -6,6 +6,7 @@ import {
   heroPrimaryCtaLabel,
   phone,
 } from "./heroContent";
+import Animation from "../animation/Animation";
 
 const HERO_HEADING_ID = "hero-heading";
 
@@ -39,7 +40,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.06)_1px,transparent_0)] [background-size:32px_32px]" />
       </div>
 
-      <div className="relative mx-auto grid min-h-[inherit] w-full max-w-7xl grid-cols-1 grid-rows-[auto_1fr_auto] gap-5 px-4 py-10 sm:gap-6 sm:py-14 lg:grid-cols-2 lg:grid-rows-[1fr_auto] lg:items-center lg:gap-x-12 lg:gap-y-8 lg:px-8 lg:py-24">
+      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 grid-rows-[auto_auto_auto] gap-5 px-4 py-10 sm:gap-6 sm:py-14 lg:min-h-[inherit] lg:grid-cols-2 lg:grid-rows-[1fr_auto] lg:items-center lg:gap-x-12 lg:gap-y-8 lg:px-8 lg:py-24">
         {/* Text block: badge, headline and desktop subtitle.
             Stacked layouts show it first; on desktop it sits at the top of the
             left column. */}
@@ -82,12 +83,13 @@ export function Hero() {
         <div
           id="hero-animation-slot"
           aria-hidden="true"
-          className="relative order-2 flex min-h-36 w-full flex-1 items-center justify-center overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-lowest/5 shadow-inner backdrop-blur-sm lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:h-full lg:min-h-[420px] lg:flex-none"
+          className="relative order-2 flex h-56 w-full items-center justify-center overflow-hidden shadow-inner backdrop-blur-sm sm:h-64 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:h-full lg:min-h-[420px]"
         >
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-secondary/10 to-transparent" />
+          {/* <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-secondary/10 to-transparent" />
           <span className="relative font-jakarta text-label-technical uppercase tracking-wider text-primary-fixed-dim/70">
             Spațiu rezervat animației 3D
-          </span>
+          </span> */}
+          <Animation/>
         </div>
 
         {/* CTA cluster. Mobile: order 3, below the animation slot. Desktop:

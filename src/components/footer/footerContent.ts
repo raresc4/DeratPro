@@ -78,7 +78,7 @@ export const legalLinks: readonly FooterLink[] = [
 
 /** Copyright line shown at the bottom of the footer. */
 export const footerCopyright =
-  "© 2025 DeratPro DDD Services S.R.L. Toate drepturile rezervate. Autorizat DSP, DSVSA & Ministerul Sănătății.";
+  "© 2026 DeratPro DDD Services S.R.L. Toate drepturile rezervate. Autorizat DSP, DSVSA & Ministerul Sănătății.";
 
 // Re-exported so footer consumers have a single import surface.
 export { phone };

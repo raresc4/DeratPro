@@ -1,7 +1,14 @@
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { Hero } from "./Hero";
 import { heroContent, heroPrimaryCtaLabel, phone } from "./heroContent";
+
+// The 3D animation mounts a real WebGL <Canvas>, which jsdom cannot provide.
+// Its behavior is covered by Animation.test.tsx; here we stub it so the Hero
+// unit test stays focused on the section's own markup.
+vi.mock("../animation/Animation", () => ({
+  default: () => null,
+}));
 
 describe("Hero", () => {
   it("renders a level-1 heading with both the lead and accent copy", () => {
