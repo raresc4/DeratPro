@@ -1,4 +1,4 @@
-import { render, screen, within } from "@testing-library/react";
+import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
 import { ContactForm } from "./ContactForm";
@@ -124,14 +124,25 @@ describe("ContactForm", () => {
     await user.click(screen.getByRole("button", { name: contactButtons.submit }));
     expect(screen.getByText(contactValidationMessages.name)).toBeInTheDocument();
 
-    await user.type(
-      screen.getByRole("textbox", { name: contactFields.name.label }),
-      "A",
-    );
+    // A failed submit schedules requestAnimationFrame(() => banner.focus()).
+    // Let that callback run and settle focus on the banner BEFORE we type;
+    // otherwise it can steal focus mid-keystroke and the character never
+    // reaches the input, leaving the error uncleared (a flaky failure).
+    await waitFor(() => expect(screen.getByRole("alert")).toHaveFocus());
 
-    expect(
-      screen.queryByText(contactValidationMessages.name),
-    ).not.toBeInTheDocument();
+    const nameInput = screen.getByRole("textbox", {
+      name: contactFields.name.label,
+    });
+    // Explicitly focus the field so the keystroke lands on it regardless of
+    // where focus currently sits.
+    await user.click(nameInput);
+    await user.type(nameInput, "A");
+
+    await waitFor(() => {
+      expect(
+        screen.queryByText(contactValidationMessages.name),
+      ).not.toBeInTheDocument();
+    });
     expect(
       screen.getByRole("textbox", { name: contactFields.name.label }),
     ).not.toHaveAttribute("aria-invalid");
