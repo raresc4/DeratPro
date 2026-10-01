@@ -1,13 +1,5 @@
 import type { SVGProps } from "react";
 
-/**
- * Decorative inline icons for the hero.
- *
- * Like the header icons, these default to `aria-hidden` / `focusable={false}`
- * so assistive technology ignores them; the accessible name is supplied by the
- * surrounding interactive element. Any SVG prop can be overridden by callers.
- */
-
 type IconProps = SVGProps<SVGSVGElement>;
 
 export function ArrowRightIcon(props: IconProps) {

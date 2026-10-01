@@ -1,18 +1,7 @@
 import type { SVGProps } from "react";
 
-/**
- * Inline icons for the contact form (send, success, error, retry).
- *
- * No Material Symbols font is loaded in this project, so — like the header and
- * hero — these are inline SVGs. They default to `aria-hidden` /
- * `focusable={false}` so assistive technology ignores them; the accessible name
- * comes from the surrounding interactive element or heading. Any SVG prop can
- * be overridden by callers.
- */
-
 type IconProps = SVGProps<SVGSVGElement>;
 
-/** Paper-plane "send" icon for the submit button. */
 export function SendIcon(props: IconProps) {
   return (
     <svg
@@ -32,7 +21,6 @@ export function SendIcon(props: IconProps) {
   );
 }
 
-/** Filled circular check for the success confirmation. */
 export function CheckCircleIcon(props: IconProps) {
   return (
     <svg
@@ -52,7 +40,6 @@ export function CheckCircleIcon(props: IconProps) {
   );
 }
 
-/** Circle-with-"!" icon for the error summary banner. */
 export function ErrorIcon(props: IconProps) {
   return (
     <svg
@@ -73,7 +60,6 @@ export function ErrorIcon(props: IconProps) {
   );
 }
 
-/** Circular-arrow "refresh" icon for the retry / reset action. */
 export function RefreshIcon(props: IconProps) {
   return (
     <svg

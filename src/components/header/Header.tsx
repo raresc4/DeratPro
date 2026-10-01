@@ -6,13 +6,6 @@ import { ctaLink, navLinks, phone } from "./navLinks";
 
 const MOBILE_MENU_ID = "mobile-menu";
 
-/**
- * Site header for DeratPro.
- *
- * Layout is responsive but the copy is identical across breakpoints: the same
- * nav links, phone and CTA are used by the desktop bar and the mobile menu.
- * On small screens the nav collapses behind an accessible disclosure button.
- */
 export function Header() {
   const menu = useDisclosure(false);
   const { isOpen, close, toggle } = menu;
@@ -20,7 +13,6 @@ export function Header() {
   const toggleRef = useRef<HTMLButtonElement>(null);
   const firstMenuItemRef = useRef<HTMLAnchorElement>(null);
 
-  // Close on Escape and move focus to the first menu item when it opens.
   useEffect(() => {
     if (!isOpen) return;
 
@@ -37,7 +29,6 @@ export function Header() {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, close]);
 
-  // Shared styles for interactive elements.
   const navLinkClass =
     "font-jakarta text-label-lg font-medium text-on-surface-variant transition-colors hover:text-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-surface-container-lowest rounded-sm px-1 py-1";
 
@@ -49,7 +40,6 @@ export function Header() {
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3.5 md:px-8">
         <Logo />
 
-        {/* Desktop navigation */}
         <nav
           aria-label="Navigație principală"
           className="hidden items-center gap-8 md:flex"
@@ -61,7 +51,6 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Trailing actions (desktop) */}
         <div className="hidden items-center gap-4 md:flex">
           <a
             href={phone.href}
@@ -75,7 +64,6 @@ export function Header() {
           </a>
         </div>
 
-        {/* Mobile menu toggle */}
         <button
           ref={toggleRef}
           type="button"
@@ -93,8 +81,6 @@ export function Header() {
         </button>
       </div>
 
-      {/* Mobile disclosure menu — rendered only when open so it leaves the
-          accessibility tree when closed. */}
       {isOpen && (
         <div
           id={MOBILE_MENU_ID}

@@ -1,10 +1,3 @@
-/**
- * DeratPro brand logo: an inline shield badge next to the "DeratPro" wordmark
- * and a small uppercase tagline. Wrapped in an anchor to the top of the page.
- *
- * The SVG is decorative (`aria-hidden`); the accessible name lives on the
- * anchor via `aria-label`, so screen readers announce a single meaningful link.
- */
 export function Logo() {
   return (
     <a

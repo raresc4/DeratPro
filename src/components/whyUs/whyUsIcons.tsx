@@ -1,17 +1,7 @@
 import type { SVGProps } from "react";
 
-/**
- * Decorative inline icons for the "De ce noi" (Why Us) section.
- *
- * Following the header/hero/services convention, these default to
- * `aria-hidden` / `focusable={false}` so assistive technology ignores them;
- * the accessible name comes from the surrounding heading. Any SVG prop can be
- * overridden by callers (e.g. `className` for sizing/color).
- */
-
 type IconProps = SVGProps<SVGSVGElement>;
 
-/** Intervenție rapidă 24/7 — a clock, standing in for fast response time. */
 export function ClockIcon(props: IconProps) {
   return (
     <svg
@@ -31,7 +21,6 @@ export function ClockIcon(props: IconProps) {
   );
 }
 
-/** Substanțe avizate & ecologice — a verified/approved badge. */
 export function VerifiedIcon(props: IconProps) {
   return (
     <svg
@@ -51,7 +40,6 @@ export function VerifiedIcon(props: IconProps) {
   );
 }
 
-/** Tehnicieni autorizați — an ID/credential badge. */
 export function BadgeIcon(props: IconProps) {
   return (
     <svg
@@ -72,7 +60,6 @@ export function BadgeIcon(props: IconProps) {
   );
 }
 
-/** Garanție scrisă — a signed contract / document. */
 export function ContractIcon(props: IconProps) {
   return (
     <svg

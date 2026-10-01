@@ -1,17 +1,7 @@
 import type { SVGProps } from "react";
 
-/**
- * Decorative inline icons for the services section.
- *
- * Following the header/hero convention, these default to `aria-hidden` /
- * `focusable={false}` so assistive technology ignores them; the accessible
- * name comes from the surrounding heading or button. Any SVG prop can be
- * overridden by callers (e.g. `className` for sizing/color).
- */
-
 type IconProps = SVGProps<SVGSVGElement>;
 
-/** Deratizare — a shield, echoing the design's protection motif. */
 export function ShieldIcon(props: IconProps) {
   return (
     <svg
@@ -30,7 +20,6 @@ export function ShieldIcon(props: IconProps) {
   );
 }
 
-/** Dezinsecție — airflow lines, standing in for cold-fog / ULV nebulization. */
 export function AirIcon(props: IconProps) {
   return (
     <svg
@@ -51,7 +40,6 @@ export function AirIcon(props: IconProps) {
   );
 }
 
-/** Dezinfecție — a spray/sanitizer bottle for surface disinfection. */
 export function SanitizerIcon(props: IconProps) {
   return (
     <svg
@@ -73,7 +61,6 @@ export function SanitizerIcon(props: IconProps) {
   );
 }
 
-/** Affirmative check inside a circle, used for each feature list item. */
 export function CheckCircleIcon(props: IconProps) {
   return (
     <svg
@@ -93,7 +80,6 @@ export function CheckCircleIcon(props: IconProps) {
   );
 }
 
-/** Chevron for the mobile collapse toggle; rotate via a `className`. */
 export function ChevronDownIcon(props: IconProps) {
   return (
     <svg

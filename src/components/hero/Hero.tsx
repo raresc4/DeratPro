@@ -10,17 +10,6 @@ import Animation from "../animation/Animation";
 
 const HERO_HEADING_ID = "hero-heading";
 
-/**
- * Landing-page hero for DeratPro.
- *
- * A dark biosafety-themed section: a live-status badge, a two-tone headline, a
- * desktop-only subtitle and two CTAs, laid out beside a reserved slot for a
- * future Three.js animation. Copy is identical across breakpoints — only the
- * layout and type scale change responsively.
- *
- * The decorative glow/grid layers are `aria-hidden`, and the animation slot is
- * excluded from the accessibility tree until the canvas is added later.
- */
 export function Hero() {
   const primaryCtaClass =
     "inline-flex items-center justify-center gap-2.5 rounded-lg bg-secondary px-8 py-4 font-jakarta text-label-lg font-semibold text-on-secondary shadow-lg transition-all hover:bg-secondary/90 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-primary-container";
@@ -33,7 +22,6 @@ export function Hero() {
       aria-labelledby={HERO_HEADING_ID}
       className="relative flex min-h-[calc(100svh-var(--header-h))] items-center overflow-hidden bg-primary-container text-inverse-on-surface"
     >
-      {/* Decorative ambient background: two blurred glows + a faint dot grid. */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 right-[15%] h-[600px] w-[600px] rounded-full bg-secondary/20 blur-[128px]" />
         <div className="absolute -bottom-24 left-0 h-[500px] w-[500px] rounded-full bg-tertiary-fixed-dim/15 blur-[140px]" />
@@ -41,11 +29,7 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 grid-rows-[auto_auto_auto] gap-5 px-4 py-10 sm:gap-6 sm:py-14 lg:min-h-[inherit] lg:grid-cols-2 lg:grid-rows-[1fr_auto] lg:items-center lg:gap-x-12 lg:gap-y-8 lg:px-8 lg:py-24">
-        {/* Text block: badge, headline and desktop subtitle.
-            Stacked layouts show it first; on desktop it sits at the top of the
-            left column. */}
         <div className="order-1 flex flex-col items-start gap-4 sm:gap-6 lg:col-start-1 lg:row-start-1">
-          {/* Live-status trust badge */}
           <div className="inline-flex items-center gap-2.5 rounded-full border border-inverse-on-surface/20 bg-inverse-on-surface/10 px-3.5 py-1.5 backdrop-blur-md">
             <span className="relative inline-flex h-2.5 w-2.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-secondary-fixed opacity-75" />
@@ -56,30 +40,22 @@ export function Hero() {
             </span>
           </div>
 
-          {/* Headline */}
           <h1
             id={HERO_HEADING_ID}
             className="font-manrope text-headline-xl-mobile font-extrabold tracking-tight text-inverse-on-surface sm:text-display-hero-mobile lg:text-display-hero"
           >
             {heroContent.headlineLead}
-            {/* Accent joins only on the desktop two-column layout, where there
-                is room; on smaller stacked screens the lead alone is enough. */}
             <span className="hidden text-secondary-fixed lg:inline">
               {" "}
               {heroContent.headlineAccent}
             </span>
           </h1>
 
-          {/* Subtitle — shown from the desktop layout up. */}
           <p className="hidden max-w-xl font-jakarta text-body-lg leading-relaxed text-primary-fixed-dim lg:block lg:text-body-xl">
             {heroContent.subtitle}
           </p>
         </div>
 
-        {/* Reserved slot for the future Three.js animation. Hidden from the
-            accessibility tree and non-interactive until the canvas is added.
-            Mobile: order 2, above the CTAs. Desktop: right column, spanning
-            both rows so it sits beside the text and CTAs. */}
         <div
           id="hero-animation-slot"
           aria-hidden="true"
@@ -88,8 +64,6 @@ export function Hero() {
           <Animation/>
         </div>
 
-        {/* CTA cluster. Mobile: order 3, below the animation slot. Desktop:
-            bottom of the left column, under the text block. */}
         <div className="order-3 flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4 lg:col-start-1 lg:row-start-2 lg:w-auto">
           <a href={ctaLink.href} className={primaryCtaClass}>
             <span>{heroPrimaryCtaLabel}</span>

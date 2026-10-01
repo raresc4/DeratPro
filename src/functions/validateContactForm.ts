@@ -1,9 +1,5 @@
 import type { ContactFormErrors, ContactFormValues } from "../models/contact";
 
-/**
- * Romanian validation messages, exported so tests and the UI reference the same
- * strings (and never drift apart).
- */
 export const contactValidationMessages = {
   name: "Numele complet este obligatoriu",
   phone: "Introduceți un număr de telefon valid (10 cifre)",
@@ -11,7 +7,6 @@ export const contactValidationMessages = {
   consent: "Trebuie să acceptați prelucrarea datelor",
 } as const;
 
-/** A Romanian phone number is considered valid when it has exactly 10 digits. */
 const PHONE_DIGIT_COUNT = 10;
 
 /**

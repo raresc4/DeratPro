@@ -1,19 +1,12 @@
 @import "tailwindcss";
 
-/*
- * DeratPro design tokens (Tailwind v4 @theme).
- * Source of truth for hex values: docs/design/web/code.html tailwind.config.
- * Typography metrics: docs/design/DESIGN.md.
- *
- * This block is intentionally structured so later landing-page sections can
- * extend it with additional tokens (tertiary, error, etc.) as needed.
- */
+  /* 
+  *  Hero and header design tokens 
+  */
 @theme {
-  /* Fonts */
   --font-manrope: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-jakarta: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 
-  /* Colors */
   --color-secondary: #006c4a;
   --color-on-secondary: #ffffff;
   --color-secondary-fixed: #85f8c4;
@@ -28,7 +21,6 @@
   --color-inverse-on-surface: #eef0ff;
   --color-primary-fixed-dim: #bac7e1;
 
-  /* Typography scale (size / line-height / weight / tracking) */
   --text-label-technical: 11px;
   --text-label-technical--line-height: 14px;
   --text-label-technical--font-weight: 700;
@@ -61,26 +53,13 @@ body {
   color: var(--color-on-surface);
 }
 
-/*
- * Hero section tokens.
- * Appended for the landing-page hero: an ambient glow color plus the display
- * and body typography scales used by the headline and subtitle.
- * Source of truth: docs/design/web/code.html tailwind.config + docs/design/DESIGN.md.
- */
-/*
- * Sticky header height, shared between the Header (which sets its own height)
- * and the Hero (which subtracts it so the first view fills the screen exactly).
- * Header layout: Logo h-10 (2.5rem) + py-3.5 (2 × 0.875rem) + 1px border.
- */
 :root {
-  --header-h: 4.375rem; /* ≈ 70px, matches the sticky header */
+  --header-h: 4.375rem; 
 }
 
 @theme {
-  /* Colors */
   --color-tertiary-fixed-dim: #93ccff;
 
-  /* Typography scale (size / line-height / weight / tracking) */
   --text-display-hero: 56px;
   --text-display-hero--line-height: 64px;
   --text-display-hero--font-weight: 800;
@@ -109,17 +88,11 @@ body {
 
 /*
  * Services section tokens.
- * Appended for the landing-page services section: the clean section
- * background, the third card's accent color, and the heading/body typography
- * scales used by the section header and card checklists.
- * Source of truth: docs/design/web/code.html tailwind.config + docs/design/DESIGN.md.
  */
 @theme {
-  /* Colors */
   --color-surface-bright: #faf8ff;
   --color-secondary-fixed-dim: #68dba9;
 
-  /* Typography scale (size / line-height / weight / tracking) */
   --text-headline-xl: 40px;
   --text-headline-xl--line-height: 48px;
   --text-headline-xl--font-weight: 700;
@@ -136,13 +109,9 @@ body {
   --text-body-md--letter-spacing: 0em;
 }
 
-/*
- * "De ce noi" (Why Us) section tokens.
- * Appended for the advantages grid: the per-card icon accent colors used on
- * the neutral icon tiles. `secondary` already exists above; these two add the
- * emerald/cyan container-text accents from the reference cards.
- * Source of truth: docs/design/DESIGN.md (on-secondary-container / on-tertiary-container).
- */
+  /* 
+  * "De ce noi" (Why Us) section tokens. 
+  */
 @theme {
   --color-on-secondary-container: #00714e;
   --color-on-tertiary-container: #188ace;
@@ -150,11 +119,6 @@ body {
 
 /*
  * Contact form section tokens.
- * Appended for the "Cere o ofertă personalizată" quote form: the error state
- * palette (banner, invalid inputs, messages), the success confirmation icon
- * tile, and the neutral outline used by input borders.
- * Source of truth: docs/design/DESIGN.md + docs/design/web/code.html config.
- * Note: --color-on-secondary-container is already declared above.
  */
 @theme {
   --color-error: #ba1a1a;

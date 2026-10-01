@@ -1,6 +1,5 @@
 import { useCallback, useState } from "react";
 
-/** State and actions for a simple open/close disclosure (menus, dialogs, etc.). */
 export interface UseDisclosureReturn {
   isOpen: boolean;
   open: () => void;

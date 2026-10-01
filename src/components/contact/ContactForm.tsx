@@ -20,7 +20,6 @@ import { CheckCircleIcon, ErrorIcon, RefreshIcon, SendIcon } from "./icons";
 
 const CONTACT_HEADING_ID = "contact-heading";
 
-/** The empty starting state for the form fields. */
 const EMPTY_VALUES: ContactFormValues = {
   name: "",
   phone: "",
@@ -30,7 +29,6 @@ const EMPTY_VALUES: ContactFormValues = {
   consent: false,
 };
 
-/** Shared input/select/textarea classes; error state swaps border + tint. */
 function fieldClasses(hasError: boolean): string {
   const base =
     "w-full rounded-lg bg-surface-container-lowest px-4 py-3 font-jakarta text-body-md text-on-surface transition-all placeholder:text-outline focus:outline-none focus-visible:ring-2";
@@ -39,19 +37,6 @@ function fieldClasses(hasError: boolean): string {
     : `${base} border border-outline-variant focus:border-secondary focus-visible:ring-secondary/25`;
 }
 
-/**
- * DeratPro contact / quote-request form ("Cere o ofertă personalizată").
- *
- * A controlled, client-only form with three behaviors:
- * - default: the editable form;
- * - error: inline per-field messages plus a summary banner on invalid submit;
- * - success: a confirmation panel with a generated reference code.
- *
- * There is no backend — {@link validateContactForm} runs on submit and
- * {@link generateReferenceCode} produces the cosmetic reference. Copy is
- * identical across breakpoints (from `contactContent.ts`); only the layout is
- * responsive. The `#contact` anchor matches the header nav and hero CTAs.
- */
 export function ContactForm() {
   const [values, setValues] = useState<ContactFormValues>(EMPTY_VALUES);
   const [errors, setErrors] = useState<ContactFormErrors>({});
@@ -126,7 +111,6 @@ export function ContactForm() {
     >
       <div className="mx-auto w-full max-w-2xl px-4 md:px-8">
         <div className="rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-6 shadow-sm md:p-8">
-          {/* Card header */}
           <div className="mb-6 border-b border-outline-variant/30 pb-6">
             <span className="mb-1 block font-jakarta text-label-technical uppercase tracking-widest text-secondary">
               {contactHeader.eyebrow}
@@ -149,7 +133,6 @@ export function ContactForm() {
             />
           ) : (
             <form noValidate className="space-y-5" onSubmit={handleSubmit}>
-              {/* Error summary banner */}
               {hasErrors && (
                 <div
                   ref={bannerRef}
@@ -164,7 +147,6 @@ export function ContactForm() {
                 </div>
               )}
 
-              {/* Name + phone: stacked on mobile, two columns from sm up */}
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
                   <label
@@ -225,7 +207,6 @@ export function ContactForm() {
                 </div>
               </div>
 
-              {/* Service select */}
               <div>
                 <label
                   htmlFor={fieldId("service")}
@@ -262,7 +243,6 @@ export function ContactForm() {
                 )}
               </div>
 
-              {/* Surface select (optional) */}
               <div>
                 <label
                   htmlFor={fieldId("surface")}
@@ -285,7 +265,6 @@ export function ContactForm() {
                 </select>
               </div>
 
-              {/* Message textarea (optional) */}
               <div>
                 <label
                   htmlFor={fieldId("message")}
@@ -303,7 +282,6 @@ export function ContactForm() {
                 />
               </div>
 
-              {/* GDPR consent */}
               <div className="pt-1">
                 <div className="flex items-start gap-2">
                   <input
@@ -355,12 +333,6 @@ interface SuccessPanelProps {
   onReset: () => void;
 }
 
-/**
- * Confirmation panel shown after a valid submit. Announced via `role="status"`.
- * Per the design decision, it offers only "Trimite o altă solicitare" — the
- * "Sună direct la dispecerat" action from the mobile mockup is intentionally
- * omitted so web and mobile stay consistent.
- */
 function SuccessPanel({ referenceCode, onReset }: SuccessPanelProps) {
   return (
     <div

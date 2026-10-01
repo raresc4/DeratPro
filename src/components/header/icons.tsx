@@ -1,13 +1,5 @@
 import type { SVGProps } from "react";
 
-/**
- * Decorative inline icons for the header.
- *
- * All icons default to `aria-hidden` / `focusable={false}` so they are ignored
- * by assistive technology; the accessible name is provided by the surrounding
- * interactive element (link/button). Callers can override any SVG prop.
- */
-
 type IconProps = SVGProps<SVGSVGElement>;
 
 export function PhoneIcon(props: IconProps) {

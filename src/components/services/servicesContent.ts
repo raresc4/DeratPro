@@ -1,38 +1,15 @@
 import type { ComponentType, SVGProps } from "react";
 import { AirIcon, SanitizerIcon, ShieldIcon } from "./servicesIcons";
 
-/**
- * A single service offering rendered as a {@link ServiceCard}.
- *
- * Copy lives here (mirroring `heroContent.ts` / `navLinks.ts`) so the exact
- * same strings are used across breakpoints — only the styling is responsive,
- * never the wording. On mobile the {@link ServiceItem.features} list collapses
- * behind a toggle; on desktop it is always visible.
- */
 export interface ServiceItem {
-  /** Stable id, used for keys and to derive the collapsible panel id. */
   id: string;
-  /** Service name, rendered as the card's `<h3>`. */
   title: string;
-  /** One- to two-sentence summary shown under the title. */
   description: string;
-  /** Three concrete selling points shown as a check list. */
   features: readonly string[];
-  /** Decorative inline icon for the card's tile. */
   Icon: ComponentType<SVGProps<SVGSVGElement>>;
-  /**
-   * Tailwind background-color class for the 2px top accent line. Kept as an
-   * explicit class string (not a token name) so Tailwind can statically detect
-   * it and the mapping stays colocated with the copy.
-   */
   accentClass: string;
 }
 
-/**
- * The three core DDD offerings. Single source of truth for the services
- * section copy; consumed by {@link Services} and rendered via
- * {@link ServiceCard}. Order matches the reference design.
- */
 export const services: readonly ServiceItem[] = [
   {
     id: "deratizare",
@@ -75,16 +52,9 @@ export const services: readonly ServiceItem[] = [
   },
 ] as const;
 
-/**
- * Section header copy, shared across breakpoints. Kept beside the services
- * array so all services wording has a single import surface.
- */
 export const servicesHeader = {
-  /** Uppercase technical eyebrow above the heading. */
   eyebrow: "Servicii Integrate DDD",
-  /** Main section heading. */
   title: "Tratamente Profesionale de Biosecuritate",
-  /** Supporting paragraph beside/under the heading. */
   subtitle:
     "Utilizăm echipamente de precizie și protocoale ecologice conforme standardelor EN 16636 pentru spații casnice, birouri și unități de producție alimentară.",
 } as const;

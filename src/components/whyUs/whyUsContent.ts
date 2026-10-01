@@ -1,38 +1,17 @@
 import type { ComponentType, SVGProps } from "react";
 import { BadgeIcon, ClockIcon, ContractIcon, VerifiedIcon } from "./whyUsIcons";
 
-/**
- * A single reason to choose DeratPro, rendered as a {@link FeatureCard}.
- *
- * Copy lives here (mirroring `servicesContent.ts` / `heroContent.ts`) so the
- * exact same strings are used across breakpoints — only the styling is
- * responsive, never the wording.
- */
 export interface Advantage {
-  /** Stable id, used as the React key. */
   id: string;
-  /** Advantage name, rendered as the card's `<h3>`. */
   title: string;
-  /** One- to two-sentence supporting description. */
   description: string;
-  /** Decorative inline icon for the card's tile. */
   Icon: ComponentType<SVGProps<SVGSVGElement>>;
-  /**
-   * Tailwind text-color utility for the icon on its neutral tile. Each card
-   * uses a slightly different accent to match the reference design; kept as a
-   * closed string-literal union so only the four vetted tokens are allowed.
-   */
   iconColorClass:
     | "text-secondary"
     | "text-on-secondary-container"
     | "text-on-tertiary-container";
 }
 
-/**
- * The four core selling points. Single source of truth for the "De ce noi"
- * section copy; consumed by {@link WhyUs} and rendered via {@link FeatureCard}.
- * Order matches the reference design.
- */
 export const advantages: readonly Advantage[] = [
   {
     id: "interventie",
@@ -68,16 +47,9 @@ export const advantages: readonly Advantage[] = [
   },
 ] as const;
 
-/**
- * Section header copy, shared across breakpoints. Kept beside the advantages
- * array so all "De ce noi" wording has a single import surface.
- */
 export const whyUsHeader = {
-  /** Uppercase technical eyebrow above the heading. */
   eyebrow: "Standarde Medicale de Igienă",
-  /** Main section heading. */
   title: "De ce aleg companiile și proprietarii DeratPro?",
-  /** Supporting paragraph under the heading. */
   subtitle:
     "Nu facem compromisuri când vine vorba de sănătate și siguranță perimetrală. Fiecare procedură este auditată și certificată.",
 } as const;

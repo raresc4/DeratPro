@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-/** Media query that matches viewports below Tailwind's `lg` breakpoint (1024px). */
 export const MOBILE_MEDIA_QUERY = "(max-width: 1023.98px)";
 
 /**

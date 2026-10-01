@@ -1,6 +1,5 @@
 import type { AnimationAction } from "three";
 
-/** The high-poly model's run clip name. */
 export const RUN_CLIP = "rig|run cycle";
 
 /**

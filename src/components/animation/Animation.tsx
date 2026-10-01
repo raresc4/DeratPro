@@ -5,7 +5,6 @@ import type { Group } from "three";
 import { useIsMobile } from "../../hooks/useIsMobile";
 import { resolveRunAction } from "./runAction";
 
-// Vite resolves these to bundled asset URLs
 import mouseHighUrl from "../../assets/mouse/mouse_high.glb?url";
 import mouseLowUrl from "../../assets/mouse/mouse_low.glb?url";
 import mouseHoleUrl from "../../assets/mouse_hole/mouse_hole.glb?url";
@@ -14,10 +13,10 @@ import mouseHoleUrl from "../../assets/mouse_hole/mouse_hole.glb?url";
 // only zooms the camera out, it never restructures the scene.
 const START_X = -6;
 const HOLE_X = 3;
-const RUN_SPEED = 2.5; // units per second
-const ENTER_DISTANCE = 0.3; // how close to the hole before it "disappears"
-const SHRINK_SPEED = 4; // scale units per second while entering the hole
-const HOLE_SCALE = 2.5; // hole size relative to its native scale
+const RUN_SPEED = 2.5; 
+const ENTER_DISTANCE = 0.3; 
+const SHRINK_SPEED = 4; 
+const HOLE_SCALE = 2.5; 
 const HOLE_Y_ROTATION = -4.2;
 
 // Camera framing. Desktop is the reference; mobile pulls the camera back and
@@ -31,7 +30,6 @@ const MOBILE_FOV = 50;
 
 function MouseHole() {
   const { scene } = useGLTF(mouseHoleUrl);
-  // Sit the hole at HOLE_X, facing the incoming mouse.
   return <primitive object={scene} position={[HOLE_X, 0, 0]} scale={HOLE_SCALE} rotation={[0, HOLE_Y_ROTATION, 0]}/>;
 }
 
@@ -56,12 +54,10 @@ function RunningMouse({ modelUrl }: { modelUrl: string }) {
     const distanceToHole = HOLE_X - g.position.x;
 
     if (distanceToHole > ENTER_DISTANCE) {
-      // Run toward the hole
       g.position.x += RUN_SPEED * delta;
       g.visible = true;
       g.scale.setScalar(1);
     } else {
-      // Reached the hole: shrink into it, then loop back to the start
       const s = g.scale.x - delta * SHRINK_SPEED;
       if (s <= 0) {
         g.position.x = START_X;
@@ -73,8 +69,6 @@ function RunningMouse({ modelUrl }: { modelUrl: string }) {
   });
 
   return (
-    // Rotate so the mouse faces +X (its running direction).
-    // Adjust the Y rotation if your model faces a different axis.
     <group ref={group} position={[START_X, 0, 0]} rotation={[0, Math.PI / 2, 0]}>
       <primitive object={scene} />
     </group>
@@ -95,7 +89,6 @@ export default function Animation() {
         position: isMobile ? MOBILE_CAM_POS : DESKTOP_CAM_POS,
         fov: isMobile ? MOBILE_FOV : DESKTOP_FOV,
       }}
-      // Aim the camera at the scene center so the action is vertically centered.
       onCreated={({ camera }) => camera.lookAt(...CAM_TARGET)}
     >
       <ambientLight intensity={0.8} />
